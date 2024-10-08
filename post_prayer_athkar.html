@@ -1,0 +1,64 @@
+---
+permalink: "/أذكار-بعد-الصلاة/"
+---
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light" class="bg-gray-50">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="أذكار بعد الصلاة، دعاء المسلم بعد الصلاة المفروضة يوميًا، أذكار بعد التسليم من الصلاة.">
+    <meta name="keywords" content="أذكار, أذكار بعد الصلاة, دعاء الصلاة, اذكار اسلامية, دعاء بعد التسليم">
+    <meta name="author" content="أذكار ويب">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="canonical" href="/أذكار-بعد-الصلاة/">
+    <title>أذكار بعد الصلاة | أذكار المسلم اليومية بعد التسليم</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add any CSS styles here -->
+    <style>
+    body {
+        font-family: 'Tajawal', sans-serif;
+        direction: rtl;
+        text-align: right;
+    }
+
+    </style>
+</head>
+<body class="mx-4 sm:mx-20 md:mx-40 lg:mx-80 border ">
+    {% include navigation.html %}
+    <header class="p-4">
+      <h1 class="text-2xl">أذكار بعد الصلاة</h1>
+    </header>
+  
+    <main class="p-4">
+      {% for item in site.data.post_prayer_adhkar.content %}
+      <div class="card bg-base-100 w-full border mb-2">
+          <div class="card-body">
+            <p>{{item.zekr}}</p>
+            <p class="text-sm text-green-500 mt-2">{{item.bless}}</p>
+            <p class="text-sm text-red-500 mt-2">عدد المرات {{item.repeat}} </p>
+          </div>
+        </div>
+      {%endfor%}
+    </main>
+  
+    {% include footer.html %}
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "أذكار بعد الصلاة",
+    "description": "دعاء المسلم بعد الصلاة المفروضة يوميًا.",
+    "inLanguage": "ar"
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</body>
+</html>

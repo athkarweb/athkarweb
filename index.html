@@ -1,0 +1,61 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light" class="bg-gray-50">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="أذكار الصباح اليومية للمسلم، أذكار الصباح مكتوبة كاملة تساعد المسلم على البدء بيومه بذكر الله.">
+  <meta name="keywords" content="أذكار, أذكار الصباح, أذكار المسلم, دعاء الصباح, اذكار اسلامية">
+  <meta name="author" content="أذكار ويب">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="//unpkg.com/alpinejs" defer></script>
+
+  <link rel="canonical" href="/أذكار-الصباح/">
+  <title>أذكار الصباح | أذكار المسلم اليومية</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Add any CSS styles here -->
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      direction: rtl;
+      text-align: right;
+    }
+  </style>
+</head>
+<body class="mx-4 sm:mx-20 md:mx-40 lg:mx-80 border ">
+  {% include navigation.html %}
+  <header class="p-4">
+    <h1 class="text-2xl">أذكار الصباح</h1>
+  </header>
+
+  <main class="p-4">
+    {% for item in site.data.adhkar_sabah.content %}
+    <div class="card bg-base-100 w-full border mb-2">
+        <div class="card-body">
+          <p>{{item.zekr}}</p>
+          <p class="text-sm text-green-500 mt-2">{{item.bless}}</p>
+          <p class="text-sm text-red-500 mt-2">عدد المرات {{item.repeat}} </p>
+        </div>
+      </div>
+    {%endfor%}
+  </main>
+
+  {% include footer.html %}
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "أذكار الصباح",
+    "description": "أذكار الصباح مكتوبة كاملة تساعد المسلم على البدء بيومه بذكر الله.",
+    "inLanguage": "ar"
+  }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</body>
+</html>
+
